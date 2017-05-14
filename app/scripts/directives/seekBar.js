@@ -20,13 +20,6 @@
              scope.max = 100;
              
              var seekBar = $(element);
-             attributes.$observe('value', function(newValue) {
-             scope.value = newValue;
-             });
- 
-             attributes.$observe('max', function(newValue) {
-             scope.max = newValue;
-             });
             
              attributes.$observe('value', function(newValue) {
              scope.value = newValue;
@@ -68,7 +61,7 @@
          $document.unbind('mouseup.thumb');
      });
  };
-<<<<<<< HEAD
+
     var notifyOnChange = function(newValue) {
         if (typeof scope.onChange === 'function') {
             scope.onChange({value: newValue});
@@ -77,11 +70,6 @@
         }
     };
 }
-=======
-         }
-     };
-  };
->>>>>>> angular-8-assignment
  
      angular
          .module('blocJams')
