@@ -47,8 +47,8 @@
              scope.value = percent * scope.max;
              notifyOnChange(scope.value);
          };
-scope.trackThumb = function() {
-     $document.bind('mousemove.thumb', function(event) {
+        scope.trackThumb = function() {
+        $document.bind('mousemove.thumb', function(event) {
          var percent = calculatePercent(seekBar, event);
          scope.$apply(function() {
              scope.value = percent * scope.max;
@@ -61,6 +61,7 @@ scope.trackThumb = function() {
          $document.unbind('mouseup.thumb');
      });
  };
+<<<<<<< HEAD
     var notifyOnChange = function(newValue) {
         if (typeof scope.onChange === 'function') {
             scope.onChange({value: newValue});
@@ -69,6 +70,11 @@ scope.trackThumb = function() {
         }
     };
 }
+=======
+         }
+     };
+  };
+>>>>>>> angular-8-assignment
  
      angular
          .module('blocJams')
