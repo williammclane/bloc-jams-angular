@@ -22,6 +22,7 @@
  * @type {Object}
  */
          var currentBuzzObject = null;
+
  /**
  * @function setSong
  * @desc Stops currently playing song and loads new audio file as currentBuzzObject
@@ -119,8 +120,16 @@
         }
      };
          
-          return SongPlayer;
-     };
+    SongPlayer.setVolume = function(volume) {
+        if (currentBuzzObject) {
+            currentBuzzObject.setVolume(volume);
+        }
+            SongPlayer.volume = volume;
+    };  
+         
+
+    return SongPlayer;
+};
      
      
      angular
