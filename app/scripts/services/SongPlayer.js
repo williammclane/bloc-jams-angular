@@ -17,6 +17,7 @@
  */
          SongPlayer.currentTime = null;
 
+         SongPlayer.currentVolume = 70;
  /**
  * @desc Buzz object audio file
  * @type {Object}
